@@ -1,20 +1,19 @@
-function play(userChoice) {
+function play(playerChoice) {
   const choices = ['グー', 'チョキ', 'パー'];
-  const computerChoice = choices[Math.floor(Math.random() * choices.length)];
-  let result;
+  const aiChoice = choices[Math.floor(Math.random() * choices.length)];
 
-  if (userChoice === computerChoice) {
+  let result = '';
+  if (playerChoice === aiChoice) {
     result = '引き分け！';
   } else if (
-    (userChoice === 'グー' && computerChoice === 'チョキ') ||
-    (userChoice === 'チョキ' && computerChoice === 'パー') ||
-    (userChoice === 'パー' && computerChoice === 'グー')
+    (playerChoice === 'グー' && aiChoice === 'チョキ') ||
+    (playerChoice === 'チョキ' && aiChoice === 'パー') ||
+    (playerChoice === 'パー' && aiChoice === 'グー')
   ) {
-    result = 'あなたの勝ち！ 🎉';
+    result = `あなたの勝ち！ AIは${aiChoice}`;
   } else {
-    result = 'コンピュータの勝ち！ 💻';
+    result = `あなたの負け... AIは${aiChoice}`;
   }
 
-  document.getElementById('result').textContent = 
-    `あなた: ${userChoice}, コンピュータ: ${computerChoice} -> ${result}`;
+  document.getElementById('result').innerText = result;
 }
