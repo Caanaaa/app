@@ -9,3 +9,11 @@ button {
   padding: 10px 20px;
   font-size: 16px;
 }
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f8ff;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+}
