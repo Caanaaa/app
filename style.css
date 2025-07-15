@@ -12,8 +12,7 @@ button {
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #f0f8ff;
-  background-image: url('background.jpg');
+  background-image: url('background.svg');
   background-size: cover;
   background-position: center;
 }
